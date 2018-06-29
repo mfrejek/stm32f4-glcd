@@ -1,6 +1,6 @@
 # STM32F4-GLCD
 
-[[https://github.com/mfrejek/stm32f4-glcd/blob/master/screen.jpg|alt=Screenshot]]
+![Screenshot](https://github.com/adam-p/mfrejek/stm32f4-glcd/screen.jpg "Screenshot of demo with text only")
 
 This is a small graphics library and display driver for STM32 controllers. It is designed and tested on a STM32F407 MCU and a 320x480 color display with ILI9481 controller.
 The graphics library `gfxlib.c` is mostly platform independent; only the display driver `ili9481_drv_*HAL*.c` must be adapted to the MCU, display controller and HAL used. 
@@ -51,7 +51,7 @@ The driver is designed for a ILI9481 LCD with 16 bit parallel interface.
 It has the following conenctions to the STM32F407 MCU:
 
 | ILI9481 | STM32F407 |
-| ------------------- |
+| ---------|:---------- |
 | DB[0-15] | FSMC_D[0-15] |
 | RS | FSMC_A18 |
 | RST | +3.3V, or RESET of the STM32F407 |
