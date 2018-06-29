@@ -1,6 +1,6 @@
 # STM32F4-GLCD
 
-![Screenshot](https://github.com/adam-p/mfrejek/stm32f4-glcd/screen.jpg "Screenshot of demo with text only")
+![Screenshot](https://github.com/mfrejek/stm32f4-glcd/screen.jpg "Screenshot of demo with text only")
 
 This is a small graphics library and display driver for STM32 controllers. It is designed and tested on a STM32F407 MCU and a 320x480 color display with ILI9481 controller.
 The graphics library `gfxlib.c` is mostly platform independent; only the display driver `ili9481_drv_*HAL*.c` must be adapted to the MCU, display controller and HAL used. 
@@ -74,7 +74,7 @@ Since some LCDs don't have a RD pin for reading from the ILI9481, the driver doe
 In your main program, include `gfxlib.h`. At startup, call `P_9481_HardwareInit()` and `P_9481_DisplayInit()`.
 `P_9481_HardwareInit()` initialized the GPIOs, FSMC and DMA channel for communication with the display.
 `P_9481_DisplayInit()` configures and initializes the ILI9481 display controller. Afterwards, the display is ready for adding graphics elements.
-For example
+For examples
 `GFXAddText(-1, "Hello World", 0, 0, 0xFFFF, MEDIUM, 0, 0x0000)`
 adds a white text in the top left corner of the LCD to the graphics buffer.
 Note that calling a 'GFXAdd...' function doesn't immediately draw the element on the screen. At first, it leaves the display contents unchanged.
